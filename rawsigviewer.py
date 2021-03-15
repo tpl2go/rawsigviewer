@@ -111,7 +111,7 @@ class TabView(QWidget):
                 self.results.spectrum_widget.autoRange()
                 
 
-class App(QMainWindow):
+class SigViewer(QMainWindow):
     """
     A QMainWindow is a QWidget but with predefined places for a menu bar, a status bar, a toolbar, 
     """
@@ -135,7 +135,7 @@ class App(QMainWindow):
 if __name__ == "__main__":
 
     app = QApplication([])
-    sigviewer = App()
+    sigviewer = SigViewer()
     sigviewer.show()
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
         app.exec_()
